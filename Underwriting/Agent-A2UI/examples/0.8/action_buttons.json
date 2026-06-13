@@ -1,0 +1,87 @@
+[
+  {
+    "beginRendering": {
+      "surfaceId": "action-buttons",
+      "root": "btn-row"
+    }
+  },
+  {
+    "surfaceUpdate": {
+      "surfaceId": "action-buttons",
+      "components": [
+        {
+          "id": "btn-row",
+          "component": {
+            "Row": {
+              "children": {
+                "explicitList": ["accept-btn", "decline-btn", "justify-btn"]
+              },
+              "distribution": "start"
+            }
+          }
+        },
+        {
+          "id": "accept-text",
+          "component": {
+            "Text": {"text": {"literalString": "✅ Accept"}}
+          }
+        },
+        {
+          "id": "accept-btn",
+          "component": {
+            "Button": {
+              "child": "accept-text",
+              "primary": true,
+              "action": {
+                "name": "accept_submission",
+                "context": [
+                  {"key": "case_id", "value": {"literalString": "NB-26-34682"}}
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "decline-text",
+          "component": {
+            "Text": {"text": {"literalString": "❌ Decline"}}
+          }
+        },
+        {
+          "id": "decline-btn",
+          "component": {
+            "Button": {
+              "child": "decline-text",
+              "action": {
+                "name": "decline_submission",
+                "context": [
+                  {"key": "case_id", "value": {"literalString": "NB-26-34682"}}
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "justify-text",
+          "component": {
+            "Text": {"text": {"literalString": "📋 Justify"}}
+          }
+        },
+        {
+          "id": "justify-btn",
+          "component": {
+            "Button": {
+              "child": "justify-text",
+              "action": {
+                "name": "justify",
+                "context": [
+                  {"key": "case_id", "value": {"literalString": "NB-26-34682"}}
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]

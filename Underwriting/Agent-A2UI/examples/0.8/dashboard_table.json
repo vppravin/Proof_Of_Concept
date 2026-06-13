@@ -1,0 +1,88 @@
+[
+  {
+    "beginRendering": {
+      "surfaceId": "info",
+      "root": "root-column",
+      "styles": {"primaryColor": "#1A73E8", "font": "Google Sans"}
+    }
+  },
+  {
+    "surfaceUpdate": {
+      "surfaceId": "info",
+      "components": [
+        {"id": "root-column", "component": {"Column": {"children": {"explicitList": ["header-card", "stats-row", "divider-1", "list-heading", "submissions-list"]}, "alignment": "stretch"}}},
+
+        {"id": "header-card", "component": {"Card": {"child": "header-content"}}},
+        {"id": "header-content", "component": {"Row": {"children": {"explicitList": ["header-icon", "header-text-col"]}, "alignment": "center", "distribution": "start"}}},
+        {"id": "header-icon", "component": {"Icon": {"name": {"literalString": "info"}}}},
+        {"id": "header-text-col", "component": {"Column": {"children": {"explicitList": ["header-title", "header-subtitle"]}, "alignment": "start"}}},
+        {"id": "header-title", "component": {"Text": {"text": {"literalString": "📊 Underwriting Dashboard"}, "usageHint": "h1"}}},
+        {"id": "header-subtitle", "component": {"Text": {"text": {"literalString": "4 submissions | 3 Assigned | 1 Pending"}, "usageHint": "caption"}}},
+
+        {"id": "stats-row", "component": {"Row": {"children": {"explicitList": ["stat-assigned", "stat-pending", "stat-urgent"]}, "distribution": "spaceEvenly", "alignment": "center"}}},
+        {"id": "stat-assigned", "component": {"Card": {"child": "stat-assigned-col"}}},
+        {"id": "stat-assigned-col", "component": {"Column": {"children": {"explicitList": ["stat-assigned-num", "stat-assigned-label"]}, "alignment": "center"}}},
+        {"id": "stat-assigned-num", "component": {"Text": {"text": {"literalString": "3"}, "usageHint": "h1"}}},
+        {"id": "stat-assigned-label", "component": {"Text": {"text": {"literalString": "Assigned"}, "usageHint": "caption"}}},
+        {"id": "stat-pending", "component": {"Card": {"child": "stat-pending-col"}}},
+        {"id": "stat-pending-col", "component": {"Column": {"children": {"explicitList": ["stat-pending-num", "stat-pending-label"]}, "alignment": "center"}}},
+        {"id": "stat-pending-num", "component": {"Text": {"text": {"literalString": "1"}, "usageHint": "h1"}}},
+        {"id": "stat-pending-label", "component": {"Text": {"text": {"literalString": "Pending"}, "usageHint": "caption"}}},
+        {"id": "stat-urgent", "component": {"Card": {"child": "stat-urgent-col"}}},
+        {"id": "stat-urgent-col", "component": {"Column": {"children": {"explicitList": ["stat-urgent-num", "stat-urgent-label"]}, "alignment": "center"}}},
+        {"id": "stat-urgent-num", "component": {"Text": {"text": {"literalString": "1"}, "usageHint": "h1"}}},
+        {"id": "stat-urgent-label", "component": {"Text": {"text": {"literalString": "🔴 Urgent"}, "usageHint": "caption"}}},
+
+        {"id": "divider-1", "component": {"Divider": {}}},
+        {"id": "list-heading", "component": {"Text": {"text": {"literalString": "Submissions"}, "usageHint": "h2"}}},
+
+        {"id": "submissions-list", "component": {"List": {"direction": "vertical", "children": {"template": {"componentId": "sub-card", "dataBinding": "/submissions"}}}}},
+        {"id": "sub-card", "component": {"Card": {"child": "sub-row"}}},
+        {"id": "sub-row", "component": {"Row": {"children": {"explicitList": ["sub-info-col", "sub-meta-col", "sub-actions"]}, "alignment": "center", "distribution": "spaceBetween"}}},
+
+        {"id": "sub-info-col", "component": {"Column": {"children": {"explicitList": ["sub-case-id", "sub-insured", "sub-broker"]}, "alignment": "start"}}},
+        {"id": "sub-case-id", "component": {"Text": {"text": {"path": "/case_id"}, "usageHint": "h3"}}},
+        {"id": "sub-insured", "component": {"Text": {"text": {"path": "/insured_name"}, "usageHint": "body"}}},
+        {"id": "sub-broker", "component": {"Text": {"text": {"path": "/broker"}, "usageHint": "caption"}}},
+
+        {"id": "sub-meta-col", "component": {"Column": {"children": {"explicitList": ["sub-priority", "sub-risk", "sub-status"]}, "alignment": "center"}}},
+        {"id": "sub-priority", "component": {"Text": {"text": {"path": "/priority"}, "usageHint": "h4"}}},
+        {"id": "sub-risk", "component": {"Text": {"text": {"path": "/risk_info"}, "usageHint": "caption"}}},
+        {"id": "sub-status", "component": {"Text": {"text": {"path": "/status"}, "usageHint": "caption"}}},
+
+        {"id": "sub-actions", "component": {"Column": {"children": {"explicitList": ["view-btn"]}, "alignment": "center"}}},
+        {"id": "view-btn-text", "component": {"Text": {"text": {"literalString": "View Details"}}}},
+        {"id": "view-btn", "component": {"Button": {"child": "view-btn-text", "primary": true, "action": {"name": "view_details", "context": [{"key": "case_id", "value": {"path": "/case_id"}}]}}}}
+      ]
+    }
+  },
+  {
+    "dataModelUpdate": {
+      "surfaceId": "info",
+      "path": "/",
+      "contents": [
+        {
+          "key": "submissions",
+          "valueMap": [
+            {"key": "s1", "valueMap": [
+              {"key": "case_id", "valueString": "NB-26-34682"},
+              {"key": "insured_name", "valueString": "Johnson Textiles"},
+              {"key": "broker", "valueString": "Aon Broking"},
+              {"key": "priority", "valueString": "🔴 P0"},
+              {"key": "risk_info", "valueString": "Risk Score: 3 | Low Risk"},
+              {"key": "status", "valueString": "Assigned → John Larsson"}
+            ]},
+            {"key": "s2", "valueMap": [
+              {"key": "case_id", "valueString": "NB-26-34681"},
+              {"key": "insured_name", "valueString": "Thomson Steels"},
+              {"key": "broker", "valueString": "Marsh Brokers"},
+              {"key": "priority", "valueString": "🔴 P0"},
+              {"key": "risk_info", "valueString": "Risk Score: 3 | Low Risk"},
+              {"key": "status", "valueString": "Assigned → John Larsson"}
+            ]}
+          ]
+        }
+      ]
+    }
+  }
+]

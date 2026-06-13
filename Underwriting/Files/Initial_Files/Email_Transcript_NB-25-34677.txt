@@ -1,0 +1,263 @@
+================================================================================
+  EMAIL COMMUNICATION TRANSCRIPT
+  Submission ID: NB-25-34677
+  Insured: Greenfield Manufacturing LLC
+  Thread Exported: June 17, 2025
+================================================================================
+
+------------------------------------------------------------------------
+EMAIL 1 OF 3
+------------------------------------------------------------------------
+From:     Sandra L. Petrov, CPCU, ARM <spetrov@keystonerisk.com>
+To:       Ryan Caldwell <rcaldwell@markelinsurance.com>
+          Commercial Property Underwriting — Midwest Division
+Cc:       Marcus T. Holloway <mholloway@greenfieldprecision.com>
+Date:     Thursday, June 12, 2025 — 10:17 AM EST
+Subject:  NEW SUBMISSION — Greenfield Manufacturing LLC | Commercial Property |
+          NB-25-34677 | Eff. 8/1/2025 | ~$187K Premium
+
+------------------------------------------------------------------------
+
+Ryan,
+
+I hope you're well. I'm reaching out to submit a new commercial property
+account that I'd love to get in front of Markel's appetite — this one is
+a genuinely clean risk with a compelling story.
+
+INSURED OVERVIEW:
+Greenfield Manufacturing LLC ("Greenfield Precision Parts") is a 22-year-old
+precision metal forging and fabrication company headquartered in Columbus, OH.
+They serve blue-chip OEM clients in automotive, heavy equipment, and defense.
+With $47M in annual revenue and 427 employees across three facilities, this
+is a well-run, mid-market manufacturing account.
+
+WHY WE'RE MOVING:
+Their current carrier, Westfield Insurance, issued a non-renewal effective
+8/1/2025 — entirely due to an internal guideline change around heavy
+manufacturing capacity, not loss-related. This is NOT a distressed risk.
+Westfield's underwriter actually called me personally to say he wished he
+could keep the account.
+
+SUBMISSION PACKAGE (attached):
+  [1] ACORD 125 / ACORD 140 — Commercial Property Application
+  [2] 5-Year Certified Loss Run (Westfield, 2020-2025)
+  [3] Schedule of Values (SOV) — 3 locations
+  [4] Supplemental Risk Questionnaire
+  [5] Broker Specification / Cover Letter
+
+COVERAGE REQUESTED:
+  - Total Insured Value:   $29,650,000
+  - Building (3 locs):     $15,800,000
+  - Contents (3 locs):     $6,700,000
+  - Business Income:       $6,250,000 (12-month)
+  - Extra Expense:         $900,000
+  - Deductible:            $25,000 per occurrence / $100,000 wind-hail
+  - Valuation:             Replacement Cost, Agreed Value
+
+LOSS HISTORY HIGHLIGHTS:
+The 5-year incurred is $511,750 across 8 claims. Two large losses:
+  - Feb 2022: Pipe burst at Location 1 — $148,500 (subrogated $12K back)
+  - Mar 2024: Hail damage at Location 2 — $198,000 (FULL ROOF REPLACEMENT
+    already completed March 2025 — brand new TPO membrane, $0 remaining
+    exposure on that building)
+
+One open claim: equipment breakdown on a forge press (CLM-2024-07811),
+$35K reserved. Parts are on order; insured expects closure Q3 2025.
+
+SELLING POINTS:
+  - All three locations have 100% wet-pipe NFPA 13 sprinkler systems
+  - Central-station fire & burglar alarms (ADT) at all locations
+  - 24/7 security at Location 1 (primary plant)
+  - Insured completed a $200K+ roof replacement at Location 2 in March 2025
+  - Strong financials: $47M revenue, debt-to-equity under 1.2x
+  - No cancellations or non-renewals in loss history
+
+TARGET PREMIUM: We're expecting quotes in the $175,000–$200,000 range.
+Westfield was at $187,400 on the current term.
+
+TIMELINE: The effective date is August 1, 2025 — we're 7 weeks out. I'd
+love to have a quote by June 27 if possible, to allow time for binding
+and any endorsement negotiation. I've already cleared the submission with
+your home-office capacity team and was told Markel has appetite for
+Ohio-domiciled heavy manufacturing.
+
+Happy to set up a 30-minute call to walk through the account. Let me know
+what works for your calendar.
+
+Best regards,
+Sandra L. Petrov, CPCU, ARM
+Senior Vice President — Commercial Lines
+Keystone Commercial Risk Advisors, LLC
+1155 Dublin Road, Suite 300 | Columbus, OH 43215
+Direct: (614) 555-0340 | Mobile: (614) 555-8812
+spetrov@keystonerisk.com | License: OH-BRK-448821
+
+================================================================================
+
+------------------------------------------------------------------------
+EMAIL 2 OF 3
+------------------------------------------------------------------------
+From:     Ryan Caldwell <rcaldwell@markelinsurance.com>
+          Commercial Property Underwriter — Midwest Division
+          Markel Insurance Company
+To:       Sandra L. Petrov <spetrov@keystonerisk.com>
+Cc:       Priya Nair <pnair@markelinsurance.com>
+          (Assistant Underwriter, Midwest Property)
+Date:     Friday, June 13, 2025 — 2:44 PM EST
+Subject:  RE: NEW SUBMISSION — Greenfield Manufacturing LLC | Commercial
+          Property | NB-25-34677 | Eff. 8/1/2025 | ~$187K Premium
+
+------------------------------------------------------------------------
+
+Sandra,
+
+Thanks for the thorough submission package — this is exactly the kind of
+account we like to see. I've reviewed the ACORD, loss runs, and SOV and
+have logged it under NB-25-34677 in our system.
+
+Initial impressions are positive. The sprinkler coverage, updated fire
+protection, and Westfield's stated non-renewal reason all read well. I've
+pushed this to our property modeling team for CAT and wind scoring and
+should have preliminary results by mid-next week.
+
+I do have two quick questions before I can finalize the quote:
+
+  1. ROOF AGE — LOCATION 2:
+     The SOV lists "Roof Age: 0 years" and references a 2025 replacement,
+     but the ACORD form shows "Roof Age: 18 years (last replaced 2007;
+     partial re-coating 2019)." I want to make sure we're applying the
+     correct age and documentation. Can you confirm the replacement was
+     fully completed and provide the roofing contractor's certification
+     or a copy of the invoice? This matters for our wind/hail pricing and
+     for the deductible schedule.
+
+  2. SPRINKLER COMPLIANCE — LOCATION 1:
+     The ACORD notes "NFPA 13 compliant, 100% coverage" but given the
+     building was constructed in 1987 and the occupancy includes active
+     forging press operations (high-challenge fire hazard), I want to
+     confirm:
+       a) Has the sprinkler system been tested and tagged in the last
+          12 months per NFPA 25?
+       b) Is the system designed to protect the forging press areas
+          specifically (not just the office / support spaces)?
+
+I'd also appreciate any documentation on the open equipment breakdown
+claim (CLM-2024-07811) — specifically the repair timeline and whether
+press #7 is currently operational.
+
+Target for quote: June 25. That gives you 3+ business days before your
+June 27 ask. Works?
+
+Best,
+Ryan Caldwell
+Commercial Property Underwriter — Midwest Division
+Markel Insurance Company
+175 S. State Street, Suite 1400 | Chicago, IL 60601
+Direct: (312) 555-0918
+rcaldwell@markelinsurance.com
+
+================================================================================
+
+------------------------------------------------------------------------
+EMAIL 3 OF 3
+------------------------------------------------------------------------
+From:     Sandra L. Petrov, CPCU, ARM <spetrov@keystonerisk.com>
+To:       Ryan Caldwell <rcaldwell@markelinsurance.com>
+Cc:       Marcus T. Holloway <mholloway@greenfieldprecision.com>
+          Priya Nair <pnair@markelinsurance.com>
+Date:     Monday, June 16, 2025 — 9:03 AM EST
+Subject:  RE: NEW SUBMISSION — Greenfield Manufacturing LLC | Commercial
+          Property | NB-25-34677 | Eff. 8/1/2025 | ~$187K Premium
+
+------------------------------------------------------------------------
+
+Ryan, Priya —
+
+Thanks for the fast acknowledgment and great questions. Marcus provided me
+with the documentation over the weekend. I have answers to both items:
+
+---
+1. ROOF REPLACEMENT — LOCATION 2 (900 Logistics Drive):
+
+The discrepancy in the ACORD was my error on the original draft — I pulled
+the prior year's SOV by mistake. The CORRECT and CURRENT status is:
+
+  - Full tear-off and replacement completed: March 14, 2025
+  - New system: 60-mil TPO single-ply membrane (Carlisle SynTec)
+  - Contractor: Pinnacle Roofing & Waterproofing LLC, Columbus, OH
+    (Licensed OH contractor #RC-2019-004451)
+  - Contract value: $214,800
+  - Manufacturer's 20-year material warranty issued
+  - Contractor's 10-year workmanship warranty issued
+
+I'm attaching three documents:
+  [A] Pinnacle Roofing final invoice dated March 14, 2025 ($214,800)
+  [B] Carlisle SynTec 20-year warranty certificate (Cert #CS-2025-044872)
+  [C] Pre- and post-replacement inspection photos (16 images)
+
+For rating purposes: Location 2 roof is NEW (0 years, March 2025). Zero
+wind/hail exposure on that building going forward.
+
+---
+2. SPRINKLER SYSTEM — LOCATION 1 (4820 Industrial Parkway):
+
+Marcus pulled the most recent inspection records from their fire safety
+file:
+
+  a) NFPA 25 Annual Inspection & Testing: Completed September 18, 2024,
+     by Rapid Response Fire Protection, Columbus, OH. Tag is current
+     through September 2025. No deficiencies noted. Report on file and
+     available upon request.
+
+  b) The system WAS specifically designed and installed to protect the
+     forging press operating areas. The original system designer
+     (Harsco Fire Protection, 1997) engineered it to Extra Hazard
+     Group 2 (EH-2) standards, accounting for the open-surface forge
+     presses, quench tanks, and hydraulic oil hazards. Density/area
+     design: 0.40 gpm/sq ft over the most demanding 2,500 sq ft area.
+     This actually EXCEEDS standard NFPA 13 requirements for the
+     occupancy.
+
+     The system was partially upgraded in 2013 when new press equipment
+     was installed, with a hydraulic calculation recertification done
+     at that time.
+
+  Sprinkler documentation available upon request — full NFPA 25 report,
+  original design spec, and 2013 recertification.
+
+---
+OPEN CLAIM UPDATE — CLM-2024-07811 (Equipment Breakdown, Press #7):
+
+Per Marcus: The replacement ram assembly arrived from the German
+manufacturer (Schuler AG) on June 5, 2025. Installation is scheduled
+for June 19-21. The press is expected to return to full operation by
+June 23. The adjuster (Crawford & Company) expects to close the claim
+by July 15. Reserved at $35,000; Marcus believes the final incurred
+will be approximately $28,000-$32,000 based on parts and labor.
+
+---
+
+Ryan — we're very much on track for your June 25 quote target. Marcus
+has asked me to relay that the August 1 effective date is firm (they have
+a renewal certificate requirement from their largest OEM client, Ford
+Motor Company, no later than July 25). So a June 25 quote and early July
+binding would be ideal.
+
+Please don't hesitate to call if anything else comes up. I'm available
+all week.
+
+Best,
+Sandra
+
+Sandra L. Petrov, CPCU, ARM
+Senior Vice President — Commercial Lines
+Keystone Commercial Risk Advisors, LLC
+1155 Dublin Road, Suite 300 | Columbus, OH 43215
+Direct: (614) 555-0340 | Mobile: (614) 555-8812
+spetrov@keystonerisk.com | License: OH-BRK-448821
+
+================================================================================
+  END OF EMAIL THREAD — NB-25-34677
+  Exported by: Keystone Commercial Risk Advisors, LLC
+  Export Date: June 17, 2025
+================================================================================
