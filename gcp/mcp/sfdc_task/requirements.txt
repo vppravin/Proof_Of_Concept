@@ -1,0 +1,8 @@
+python-dotenv
+fastmcp
+mcp
+httpx-sse
+starlette
+uvicorn
+simple-salesforce
+pytz

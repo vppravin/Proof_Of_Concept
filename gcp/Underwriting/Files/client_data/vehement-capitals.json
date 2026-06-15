@@ -1,0 +1,35 @@
+{
+  "fein": "83-5024617",
+  "client_name": "Vehement Capitals",
+  "mailing_address": "200 Park Avenue, Suite 3100, New York, NY 10166",
+  "sic_code": "6159",
+  "broker": "Marksons Insurance Group",
+  "status": "Active",
+  "years_as_client": 1,
+  "active_policies": [
+    {
+      "policy_number": "CH-AV-2024-91005",
+      "lob": "Aviation",
+      "carrier": "Chubb",
+      "premium": 312000,
+      "effective_date": "2024-12-01",
+      "expiration_date": "2025-12-01",
+      "status": "Active"
+    }
+  ],
+  "total_premium_collected": 312000,
+  "total_claims_paid": 0,
+  "loss_ratio": 0.0,
+  "claim_count": 0,
+  "large_loss_count": 0,
+  "previous_risk_scores": [
+    {"year": 2024, "score": 3, "level": "Low"}
+  ],
+  "payment_history": "On-time",
+  "cancellations": 0,
+  "non_renewals_by_carrier": 0,
+  "non_renewal_reason": null,
+  "potential_hazards": ["Aviation hull and liability exposure", "High TIV — $23M"],
+  "risk_improvements": [],
+  "notes": "Private equity firm with aviation fleet. New client, first policy year. Clean so far. $23M TIV triggers P0 override."
+}

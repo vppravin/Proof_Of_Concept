@@ -1,0 +1,7 @@
+python-dotenv==1.2.1
+simple-salesforce==1.12.6
+fastmcp
+starlette
+uvicorn
+mcp
+httpx-sse

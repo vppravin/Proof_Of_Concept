@@ -1,0 +1,36 @@
+{
+  "fein": "52-1834790",
+  "client_name": "Globex Corporation",
+  "mailing_address": "1200 Technology Drive, Suite 400, San Jose, CA 95110",
+  "sic_code": "7372",
+  "broker": "Alliant Insurance Services",
+  "status": "Active",
+  "years_as_client": 8,
+  "active_policies": [
+    {
+      "policy_number": "NF-WC-2024-33210",
+      "lob": "Workers Compensation",
+      "carrier": "Nationwide",
+      "premium": 98500,
+      "effective_date": "2024-06-01",
+      "expiration_date": "2025-06-01",
+      "status": "Active"
+    }
+  ],
+  "total_premium_collected": 812000,
+  "total_claims_paid": 23400,
+  "loss_ratio": 0.03,
+  "claim_count": 2,
+  "large_loss_count": 0,
+  "previous_risk_scores": [
+    {"year": 2024, "score": 0, "level": "Low"},
+    {"year": 2023, "score": 0, "level": "Low"}
+  ],
+  "payment_history": "On-time — autopay enrolled",
+  "cancellations": 0,
+  "non_renewals_by_carrier": 0,
+  "non_renewal_reason": null,
+  "potential_hazards": [],
+  "risk_improvements": [],
+  "notes": "Excellent long-term client. Minimal claims. Technology company with office-only exposure."
+}

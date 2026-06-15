@@ -1,0 +1,7 @@
+fastmcp
+uvicorn
+yfinance
+matplotlib
+requests
+azure-storage-blob
+python-dotenv

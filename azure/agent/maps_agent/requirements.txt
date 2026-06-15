@@ -1,0 +1,7 @@
+langchain-openai
+langchain
+langchain-community
+langchain-mcp-adapters
+python-dotenv
+fastapi
+uvicorn

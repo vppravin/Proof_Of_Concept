@@ -1,0 +1,6 @@
+python-dotenv
+fastmcp
+uvicorn
+pyodbc
+yfinance
+pandas

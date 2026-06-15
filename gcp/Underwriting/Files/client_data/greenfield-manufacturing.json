@@ -1,0 +1,46 @@
+{
+  "fein": "31-4872156",
+  "client_name": "Greenfield Manufacturing LLC",
+  "mailing_address": "4820 Industrial Parkway, Columbus, OH 43228",
+  "sic_code": "3462",
+  "broker": "Keystone Commercial Risk Advisors, LLC",
+  "status": "Active",
+  "years_as_client": 5,
+  "active_policies": [
+    {
+      "policy_number": "WCI-CP-2024-88341",
+      "lob": "Commercial Property",
+      "carrier": "Westfield Insurance Company",
+      "premium": 187400,
+      "effective_date": "2024-08-01",
+      "expiration_date": "2025-08-01",
+      "status": "Non-Renewed"
+    },
+    {
+      "policy_number": "WCI-WC-2024-55120",
+      "lob": "Workers Compensation",
+      "carrier": "Westfield Insurance Company",
+      "premium": 142600,
+      "effective_date": "2024-08-01",
+      "expiration_date": "2025-08-01",
+      "status": "Active"
+    }
+  ],
+  "total_premium_collected": 1648000,
+  "total_claims_paid": 473750,
+  "loss_ratio": 0.29,
+  "claim_count": 7,
+  "large_loss_count": 2,
+  "previous_risk_scores": [
+    {"year": 2024, "score": 5, "level": "Medium"},
+    {"year": 2023, "score": 5, "level": "Medium"},
+    {"year": 2022, "score": 6, "level": "Medium"}
+  ],
+  "payment_history": "On-time — no late payments in 5 years",
+  "cancellations": 0,
+  "non_renewals_by_carrier": 1,
+  "non_renewal_reason": "Carrier internal guideline change (heavy manufacturing capacity reduction) — not loss-related",
+  "potential_hazards": ["Heavy manufacturing — forging operations", "Hydraulic oil fire risk", "Equipment breakdown exposure"],
+  "risk_improvements": ["$214K roof replacement at Location 2 (March 2025)", "Sprinkler system upgrade at Location 1 (2013)", "24/7 security at primary plant"],
+  "notes": "Reliable mid-market manufacturing account. Strong safety culture. Ford Motor Company is primary OEM client. $47M annual revenue, 427 employees across 3 facilities."
+}

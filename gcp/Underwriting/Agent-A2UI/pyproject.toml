@@ -1,0 +1,37 @@
+[project]
+name = "underwriting-workbench-a2ui"
+version = "0.1.0"
+description = "Smart Underwriting Workbench agent with A2UI for Gemini Enterprise."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "a2a-sdk==0.3.25",
+    "google-adk>=1.28.0",
+    "google-genai>=1.27.0",
+    "python-dotenv>=1.1.0",
+    "uvicorn",
+    "google-cloud-aiplatform>=1.84",
+    "google-cloud-bigquery>=3.0",
+    "google-cloud-storage>=2.0",
+    "google-cloud-documentai>=2.0",
+    "jsonschema>=4.0.0",
+    "a2ui-agent-sdk==0.1.2",
+    "openpyxl>=3.1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+default = true
+
+[project.scripts]
+start = "main:serve"

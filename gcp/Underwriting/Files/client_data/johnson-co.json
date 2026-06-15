@@ -1,0 +1,35 @@
+{
+  "fein": "27-3651048",
+  "client_name": "Johnson & Co",
+  "mailing_address": "550 Market Street, Floor 12, Philadelphia, PA 19106",
+  "sic_code": "5411",
+  "broker": "Brad & Bard Insurance Brokers",
+  "status": "Active",
+  "years_as_client": 2,
+  "active_policies": [
+    {
+      "policy_number": "HF-CL-2024-78900",
+      "lob": "Commercial Liability",
+      "carrier": "Hartford Financial",
+      "premium": 67200,
+      "effective_date": "2024-11-15",
+      "expiration_date": "2025-11-15",
+      "status": "Active"
+    }
+  ],
+  "total_premium_collected": 134400,
+  "total_claims_paid": 112000,
+  "loss_ratio": 0.83,
+  "claim_count": 3,
+  "large_loss_count": 1,
+  "previous_risk_scores": [
+    {"year": 2024, "score": 3, "level": "Low"}
+  ],
+  "payment_history": "1 late payment (Feb 2025) — resolved within 15 days",
+  "cancellations": 0,
+  "non_renewals_by_carrier": 0,
+  "non_renewal_reason": null,
+  "potential_hazards": ["Slip-and-fall exposure at retail locations", "Product liability — consumer goods"],
+  "risk_improvements": [],
+  "notes": "Newer client. High loss ratio driven by one large liability claim ($95K settlement). Monitor closely at renewal."
+}

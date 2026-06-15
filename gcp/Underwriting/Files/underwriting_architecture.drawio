@@ -1,0 +1,131 @@
+<mxfile host="app.diagrams.net" modified="2026-05-18T07:45:00.000Z" agent="5.0" version="24.0.0" type="device">
+  <diagram id="underwriting-arch" name="Smart Underwriting Workbench">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Smart Underwriting Workbench" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="700" y="20" width="520" height="40" as="geometry" /></mxCell>
+        <mxCell id="subtitle" value="AI-Powered Insurance Submission Processing Pipeline | GCP Native" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="700" y="55" width="520" height="25" as="geometry" /></mxCell>
+
+        <!-- BOX 1: INTAKE -->
+        <mxCell id="box1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=2;arcSize=5;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="280" height="380" as="geometry" /></mxCell>
+        <mxCell id="box1-lbl" value="① INTAKE" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="55" y="108" width="100" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="broker-icon" value="" style="shape=mxgraph.gcp2.person;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="95" y="160" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="broker-lbl" value="Insurance Broker" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="70" y="202" width="90" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="gmail-icon" value="" style="shape=mxgraph.gcp2.gmail;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="95" y="270" width="40" height="32" as="geometry" /></mxCell>
+        <mxCell id="gmail-lbl" value="Gmail" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="85" y="305" width="60" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="as-icon" value="" style="shape=mxgraph.gcp2.app_engine;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="210" y="270" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="as-lbl" value="Apps Script&#xa;(1 min poll)" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="192" y="312" width="76" height="28" as="geometry" /></mxCell>
+
+        <mxCell id="cfe-icon" value="" style="shape=mxgraph.gcp2.cloud_functions;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="210" y="385" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="cfe-lbl" value="Cloud Function&#xa;email-intake" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="188" y="427" width="85" height="28" as="geometry" /></mxCell>
+
+        <mxCell id="e-b-g" value="email + PDFs" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;fontSize=8;fontColor=#FFFFFF;" edge="1" source="broker-icon" target="gmail-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-g-as" value="poll" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;fontSize=8;fontColor=#FFFFFF;" edge="1" source="gmail-icon" target="as-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-as-cf" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;fontSize=8;fontColor=#FFFFFF;" edge="1" source="as-icon" target="cfe-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- BOX 2: TRIGGER -->
+        <mxCell id="box2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=2;arcSize=5;" vertex="1" parent="1"><mxGeometry x="370" y="100" width="200" height="380" as="geometry" /></mxCell>
+        <mxCell id="box2-lbl" value="② TRIGGER" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="385" y="108" width="120" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="gcs-icon" value="" style="shape=mxgraph.gcp2.cloud_storage;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="445" y="170" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="gcs-lbl" value="Cloud Storage&#xa;underwriting-workbench" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="410" y="212" width="120" height="28" as="geometry" /></mxCell>
+
+        <mxCell id="cft-icon" value="" style="shape=mxgraph.gcp2.cloud_functions;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="445" y="320" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="cft-lbl" value="Cloud Function&#xa;process-submission-trigger" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="400" y="362" width="140" height="28" as="geometry" /></mxCell>
+
+        <mxCell id="e-cf-gcs" value="upload PDFs" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;fontSize=8;fontColor=#FFFFFF;" edge="1" source="cfe-icon" target="gcs-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-gcs-cft" value="Eventarc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=2;dashed=1;fontSize=9;fontStyle=1;fontColor=#4285F4;" edge="1" source="gcs-icon" target="cft-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- BOX 3: AI PROCESSING -->
+        <mxCell id="box3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=2;arcSize=5;" vertex="1" parent="1"><mxGeometry x="620" y="100" width="540" height="380" as="geometry" /></mxCell>
+        <mxCell id="box3-lbl" value="③ AI PROCESSING" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="635" y="108" width="160" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="orch-icon" value="" style="shape=mxgraph.gcp2.vertex_ai;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="855" y="145" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="orch-lbl" value="Vertex AI Agent Engine&#xa;Gemini 2.5 Pro — Orchestrator" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="805" y="187" width="150" height="28" as="geometry" /></mxCell>
+
+        <mxCell id="tools-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=1;dashed=1;arcSize=4;" vertex="1" parent="1"><mxGeometry x="645" y="230" width="490" height="230" as="geometry" /></mxCell>
+        <mxCell id="tools-lbl" value="21 Agent Tools" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="655" y="235" width="100" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="t1-icon" value="" style="shape=mxgraph.gcp2.cloud_natural_language_api;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="680" y="270" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t1-lbl" value="Classification&#xa;(Gemini Flash)" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="660" y="312" width="80" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="t2-icon" value="" style="shape=mxgraph.gcp2.document_ai;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="790" y="270" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t2-lbl" value="Extraction&#xa;(Document AI)" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="770" y="312" width="80" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="t3-icon" value="" style="shape=mxgraph.gcp2.cloud_dataflow;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="900" y="270" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t3-lbl" value="Rules Engine&#xa;(Business Rules)" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="878" y="312" width="85" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="t4-icon" value="" style="shape=mxgraph.gcp2.bigquery;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1010" y="270" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t4-lbl" value="Submission&#xa;CRUD" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="993" y="312" width="75" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="t5-icon" value="" style="shape=mxgraph.gcp2.google_maps_platform;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="680" y="360" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t5-lbl" value="Location Risk" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="662" y="402" width="76" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="t6-icon" value="" style="shape=mxgraph.gcp2.cloud_datastore;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="790" y="360" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t6-lbl" value="Client History" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="772" y="402" width="76" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="t7-icon" value="" style="shape=mxgraph.gcp2.error_reporting;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="900" y="360" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t7-lbl" value="Error Handling" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="880" y="402" width="80" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="t8-icon" value="" style="shape=mxgraph.gcp2.cloud_logging;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1010" y="360" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="t8-lbl" value="Event Logging&#xa;(Callbacks)" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="990" y="402" width="80" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="e-orch-tools" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;" edge="1" source="orch-icon" target="tools-box" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-cft-orch" value="stream_query()" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=2;fontSize=9;fontStyle=1;fontColor=#4285F4;" edge="1" source="cft-icon" target="orch-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- BOX 4: PRESENTATION -->
+        <mxCell id="box4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=2;arcSize=5;" vertex="1" parent="1"><mxGeometry x="1210" y="100" width="300" height="380" as="geometry" /></mxCell>
+        <mxCell id="box4-lbl" value="④ PRESENTATION" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="1225" y="108" width="160" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="cr-icon" value="" style="shape=mxgraph.gcp2.cloud_run;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1335" y="150" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="cr-lbl" value="Cloud Run" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="1320" y="192" width="80" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="api-icon" value="" style="shape=mxgraph.gcp2.cloud_endpoints;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1270" y="250" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="api-lbl" value="FastAPI Backend&#xa;Chat | Logs | Approve" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="1245" y="292" width="90" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="react-icon" value="" style="shape=mxgraph.gcp2.application_system;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1270" y="355" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="react-lbl" value="React Dashboard&#xa;Submissions | Detail&#xa;Agent Logs | Chat" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="1240" y="397" width="100" height="35" as="geometry" /></mxCell>
+
+        <mxCell id="chat-icon" value="" style="shape=mxgraph.gcp2.vertex_ai;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1400" y="280" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="chat-lbl" value="Chat Agent&#xa;Gemini 2.0 Flash&#xa;8 Tools" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="1378" y="322" width="85" height="35" as="geometry" /></mxCell>
+
+        <mxCell id="user-icon" value="" style="shape=mxgraph.gcp2.person;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1560" y="290" width="40" height="40" as="geometry" /></mxCell>
+        <mxCell id="user-lbl" value="Underwriter" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="1545" y="332" width="70" height="18" as="geometry" /></mxCell>
+
+        <mxCell id="ep1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;" edge="1" source="cr-icon" target="api-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ep2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;" edge="1" source="api-icon" target="react-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ep3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;" edge="1" source="api-icon" target="chat-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ep4" value="browser" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1.5;fontSize=8;fontColor=#FFFFFF;" edge="1" source="react-icon" target="user-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- DATA LAYER -->
+        <mxCell id="box-data" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4285F4;strokeWidth=2;dashed=1;arcSize=5;" vertex="1" parent="1"><mxGeometry x="370" y="550" width="790" height="150" as="geometry" /></mxCell>
+        <mxCell id="box-data-lbl" value="DATA LAYER" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#4285F4;" vertex="1" parent="1"><mxGeometry x="385" y="558" width="120" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="bq-icon" value="" style="shape=mxgraph.gcp2.bigquery;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="430" y="600" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="bq-lbl" value="BigQuery&#xa;submissions | errors" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="410" y="642" width="90" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="gcs2-icon" value="" style="shape=mxgraph.gcp2.cloud_storage;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="620" y="600" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="gcs2-lbl" value="Cloud Storage&#xa;_events | _thinking" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="600" y="642" width="90" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="dai-icon" value="" style="shape=mxgraph.gcp2.document_ai;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="810" y="600" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="dai-lbl" value="Document AI&#xa;Form Parser" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="793" y="642" width="85" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="gem-icon" value="" style="shape=mxgraph.gcp2.vertex_ai;fillColor=#4285F4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1000" y="600" width="50" height="40" as="geometry" /></mxCell>
+        <mxCell id="gem-lbl" value="Gemini Flash&#xa;Classification" style="text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;fontSize=9;fontColor=#FFFFFF;" vertex="1" parent="1"><mxGeometry x="983" y="642" width="85" height="25" as="geometry" /></mxCell>
+
+        <mxCell id="ed1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;dashed=1;" edge="1" source="t4-icon" target="bq-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ed2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;dashed=1;" edge="1" source="t8-icon" target="gcs2-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ed3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;dashed=1;" edge="1" source="t2-icon" target="dai-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ed4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;dashed=1;" edge="1" source="t1-icon" target="gem-icon" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ed5" value="read" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;fontSize=8;fontColor=#FFFFFF;" edge="1" source="api-icon" target="bq-icon" parent="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1200" y="270" /><mxPoint x="1200" y="620" /></Array></mxGeometry></mxCell>
+        <mxCell id="ed6" value="poll 500ms" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#4285F4;strokeWidth=1;dashed=1;fontSize=8;fontColor=#FFFFFF;" edge="1" source="api-icon" target="gcs2-icon" parent="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1190" y="270" /><mxPoint x="1190" y="620" /></Array></mxGeometry></mxCell>
+
+        <mxCell id="legend" value="① Broker sends email with PDFs → ② Uploaded to GCS, Eventarc triggers → ③ AI Agent orchestrates 21 tools → ④ Underwriter reviews in dashboard" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#FFFFFF;fontStyle=2;" vertex="1" parent="1"><mxGeometry x="380" y="740" width="850" height="25" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

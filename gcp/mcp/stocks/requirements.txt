@@ -1,0 +1,10 @@
+fastmcp
+mcp
+httpx-sse
+starlette
+uvicorn
+yfinance
+matplotlib
+requests
+google-cloud-storage
+python-dotenv

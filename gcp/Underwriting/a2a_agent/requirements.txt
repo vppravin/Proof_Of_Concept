@@ -1,0 +1,4 @@
+google-cloud-aiplatform[adk,agent_engines]
+a2a-sdk
+google-cloud-bigquery
+google-cloud-storage

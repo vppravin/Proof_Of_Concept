@@ -1,0 +1,7 @@
+fastmcp
+mcp
+httpx-sse
+starlette
+uvicorn
+python-dotenv
+google-cloud-bigquery

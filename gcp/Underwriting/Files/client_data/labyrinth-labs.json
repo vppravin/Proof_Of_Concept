@@ -1,0 +1,45 @@
+{
+  "fein": "46-2917385",
+  "client_name": "Labyrinth Labs",
+  "mailing_address": "8900 Research Park Boulevard, Austin, TX 78759",
+  "sic_code": "2836",
+  "broker": "Aon Risk Solutions",
+  "status": "Active",
+  "years_as_client": 3,
+  "active_policies": [
+    {
+      "policy_number": "TR-CP-2024-44210",
+      "lob": "Commercial Property",
+      "carrier": "Travelers",
+      "premium": 54800,
+      "effective_date": "2024-09-01",
+      "expiration_date": "2025-09-01",
+      "status": "Active"
+    },
+    {
+      "policy_number": "TR-CY-2024-44215",
+      "lob": "Cyber",
+      "carrier": "Travelers",
+      "premium": 38200,
+      "effective_date": "2024-09-01",
+      "expiration_date": "2025-09-01",
+      "status": "Active"
+    }
+  ],
+  "total_premium_collected": 278400,
+  "total_claims_paid": 41500,
+  "loss_ratio": 0.15,
+  "claim_count": 2,
+  "large_loss_count": 0,
+  "previous_risk_scores": [
+    {"year": 2024, "score": 8, "level": "High"},
+    {"year": 2023, "score": 7, "level": "High"}
+  ],
+  "payment_history": "On-time",
+  "cancellations": 0,
+  "non_renewals_by_carrier": 0,
+  "non_renewal_reason": null,
+  "potential_hazards": ["Older building stock (1995)", "High flood zone exposure"],
+  "risk_improvements": ["Installed flood barriers at loading dock (2024)"],
+  "notes": "Biotech research company. High risk score due to building age and flood zone, but low actual loss experience. Aon-brokered account."
+}

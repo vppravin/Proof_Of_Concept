@@ -1,0 +1,7 @@
+python-dotenv
+fastmcp
+uvicorn
+azure-storage-blob
+pyodbc
+openai
+pypdf2

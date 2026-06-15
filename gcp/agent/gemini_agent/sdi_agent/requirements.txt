@@ -1,0 +1,15 @@
+# Google Cloud
+google-cloud-bigquery==3.17.2
+google-adk==1.23.0
+
+# FastMCP & MCP
+fastmcp==2.2.10
+mcp==1.25.0
+
+# Web framework
+starlette    # Compatible with google-adk 1.23.0
+uvicorn
+
+# Environment variables
+python-dotenv
+httpx-sse

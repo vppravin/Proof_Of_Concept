@@ -1,0 +1,142 @@
+# azure-pipelines.yml
+# CI/CD Pipeline for a2a-router → Azure Container Apps
+#
+# WHAT THIS DOES:
+# 1. Triggers on every push to 'main' branch
+# 2. Builds the Docker image
+# 3. Pushes it to Azure Container Registry (ACR)
+# 4. Deploys the new image to Azure Container Apps
+#
+# WHY EACH STAGE:
+# - Build: Compiles your code into a Docker image (reproducible, isolated)
+# - Push: Stores the image in ACR (your private registry, versioned)
+# - Deploy: Updates the running container with the new image (zero-downtime)
+
+# ─── TRIGGER ───────────────────────────────────────────────
+# WHY: Automatically run this pipeline when code is pushed to main.
+# You can also add branch filters or path filters here.
+trigger:
+  branches:
+    include:
+      - main
+
+# ─── VARIABLES ─────────────────────────────────────────────
+# WHY: Centralize all config in one place. Change once, applies everywhere.
+# No hardcoded values scattered across the pipeline.
+variables:
+  azureSubscription: 'azure-wm-connection'        # Service connection from Step 3
+  acrConnection: 'acr-wm-connection'               # Docker registry connection from Step 4
+  acrServer: 'wmagentacr-hmf9f2atgjd6a5ce.azurecr.io'
+  imageName: 'a2a-router'
+  containerAppName: 'a2a-router'
+  resourceGroup: 'wealth_management'
+  # Auto-increment tag using build ID — every build gets a unique version
+  imageTag: 'v$(Build.BuildId)'
+
+# ─── POOL ──────────────────────────────────────────────────
+# WHY: Specifies which build agent runs the pipeline.
+# ubuntu-latest is free, has Docker pre-installed, and is fastest for container builds.
+pool:
+  vmImage: 'ubuntu-latest'
+
+# ─── STAGES ────────────────────────────────────────────────
+stages:
+
+  # ════════════════════════════════════════════════════════
+  # STAGE 1: BUILD & PUSH
+  # ════════════════════════════════════════════════════════
+  # WHY separate stage: Build artifacts should be independent of deployment.
+  # You can re-deploy the same image to staging/prod without rebuilding.
+  - stage: BuildAndPush
+    displayName: '🐳 Build & Push Docker Image'
+    jobs:
+      - job: Build
+        displayName: 'Build and push to ACR'
+        steps:
+
+          # STEP 1: Checkout code
+          # WHY: Pipeline needs your source code to build the Docker image.
+          - checkout: self
+            displayName: '📥 Checkout source code'
+
+          # STEP 2: Build and push Docker image to ACR
+          # WHY: This single task handles docker login, build, tag, and push.
+          # Uses the Docker registry service connection — no credentials in code.
+          - task: Docker@2
+            displayName: '🔨 Build & Push image to ACR'
+            inputs:
+              containerRegistry: '$(acrConnection)'
+              repository: '$(imageName)'
+              command: 'buildAndPush'
+              Dockerfile: '**/Dockerfile'
+              tags: |
+                $(imageTag)
+                latest
+
+  # ════════════════════════════════════════════════════════
+  # STAGE 2: DEPLOY
+  # ════════════════════════════════════════════════════════
+  # WHY separate stage: Deployment is a distinct concern.
+  # You can add approval gates, staging environments, or rollback here later.
+  - stage: Deploy
+    displayName: '🚀 Deploy to Container Apps'
+    dependsOn: BuildAndPush
+    # WHY condition: Only deploy if build succeeded. Don't push broken images.
+    condition: succeeded()
+    jobs:
+      - job: Deploy
+        displayName: 'Update Container App'
+        steps:
+
+          # STEP 3: Deploy new image to Azure Container Apps
+          # WHY: Updates the running container to use the newly built image.
+          # Azure Container Apps handles rolling updates automatically — zero downtime.
+          - task: AzureCLI@2
+            displayName: '🚢 Update Container App image'
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              scriptType: 'bash'
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                echo "Deploying $(acrServer)/$(imageName):$(imageTag) to $(containerAppName)..."
+
+                az containerapp update \
+                  --name $(containerAppName) \
+                  --resource-group $(resourceGroup) \
+                  --image $(acrServer)/$(imageName):$(imageTag)
+
+                echo "✅ Deployment complete!"
+
+                # Verify the deployment
+                FQDN=$(az containerapp show \
+                  --name $(containerAppName) \
+                  --resource-group $(resourceGroup) \
+                  --query properties.configuration.ingress.fqdn \
+                  -o tsv)
+                echo "📍 Live at: https://${FQDN}"
+
+          # STEP 4: Health check
+          # WHY: Verify the new deployment is actually working.
+          # Catches issues early instead of finding out from users.
+          - task: AzureCLI@2
+            displayName: '❤️ Health Check'
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              scriptType: 'bash'
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                FQDN=$(az containerapp show \
+                  --name $(containerAppName) \
+                  --resource-group $(resourceGroup) \
+                  --query properties.configuration.ingress.fqdn \
+                  -o tsv)
+
+                echo "Checking health at https://${FQDN}/health ..."
+                HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://${FQDN}/health" --max-time 30)
+
+                if [ "$HTTP_CODE" = "200" ]; then
+                  echo "✅ Health check passed (HTTP $HTTP_CODE)"
+                else
+                  echo "❌ Health check failed (HTTP $HTTP_CODE)"
+                  exit 1
+                fi

@@ -1,0 +1,4 @@
+python-dotenv
+fastmcp
+uvicorn
+requests

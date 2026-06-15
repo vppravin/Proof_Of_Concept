@@ -1,0 +1,23 @@
+{
+  "fein": "39-7148263",
+  "client_name": "Precision Engineering Co",
+  "mailing_address": "7400 Harbor Boulevard, Weehawken, NJ 07086",
+  "sic_code": "3599",
+  "broker": "King & Company Insurance",
+  "status": "Prospect",
+  "years_as_client": 0,
+  "active_policies": [],
+  "total_premium_collected": 0,
+  "total_claims_paid": 0,
+  "loss_ratio": null,
+  "claim_count": 0,
+  "large_loss_count": 0,
+  "previous_risk_scores": [],
+  "payment_history": null,
+  "cancellations": 0,
+  "non_renewals_by_carrier": 0,
+  "non_renewal_reason": null,
+  "potential_hazards": [],
+  "risk_improvements": [],
+  "notes": "New prospect. Marine submission — auto-declined per underwriting guidelines."
+}

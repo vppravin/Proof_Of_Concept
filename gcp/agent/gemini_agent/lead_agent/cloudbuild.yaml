@@ -1,0 +1,19 @@
+steps:
+  - name: "python:3.11"
+    dir: "agent/gemini_agent/lead_agent"
+    entrypoint: bash
+    args:
+      - "-c"
+      - >
+        pip install -r requirements.txt &&
+        pip install google-cloud-aiplatform google-adk==1.18.0 google-genai==1.47.0 python-dotenv==1.2.1 &&
+        python deploy.py
+    env:
+      - "GOOGLE_CLOUD_PROJECT=gbu-demo-playground"
+      - "GOOGLE_CLOUD_LOCATION=us-central1"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: "E2_HIGHCPU_8"
+
+timeout: "1200s"

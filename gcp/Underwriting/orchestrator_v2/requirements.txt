@@ -1,0 +1,11 @@
+google-cloud-aiplatform[adk]
+google-adk
+google-genai>=1.69.0
+google-cloud-storage
+google-cloud-documentai
+google-cloud-bigquery
+openpyxl
+vertexai
+python-dotenv==1.2.1
+pydantic
+cloudpickle

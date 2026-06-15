@@ -1,0 +1,11 @@
+python-dotenv
+fastmcp
+mcp
+httpx-sse
+starlette
+uvicorn
+google-cloud-bigquery
+google-cloud-storage
+google-cloud-aiplatform
+fpdf2
+yfinance

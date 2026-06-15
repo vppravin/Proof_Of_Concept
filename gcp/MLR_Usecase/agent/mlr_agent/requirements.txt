@@ -1,0 +1,8 @@
+cloudpickle
+google-cloud-aiplatform
+google-cloud-storage
+pydantic
+google-adk==1.28.0
+google-genai==1.69.0
+python-dotenv==1.2.1
+httpx

@@ -1,0 +1,39 @@
+steps:
+  # Step 1: Build Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    dir: "mcp/lead_agent_mcp"
+    args:
+      [
+        "build",
+        "-t",
+        "us-central1-docker.pkg.dev/gbu-demo-playground/cloud-run-source-deploy/mcp-leadagent:$COMMIT_SHA",
+        "."
+      ]
+
+  # Step 2: Push image to Artifact Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "us-central1-docker.pkg.dev/gbu-demo-playground/cloud-run-source-deploy/mcp-leadagent:$COMMIT_SHA"
+      ]
+
+  # Step 3: Deploy to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "mcp-leadagent",
+        "--image=us-central1-docker.pkg.dev/gbu-demo-playground/cloud-run-source-deploy/mcp-leadagent:$COMMIT_SHA",
+        "--region=us-central1",
+        "--platform=managed",
+        "--allow-unauthenticated"
+      ]
+
+images:
+  - "us-central1-docker.pkg.dev/gbu-demo-playground/cloud-run-source-deploy/mcp-leadagent:$COMMIT_SHA"
+  
+options:
+  logging: CLOUD_LOGGING_ONLY

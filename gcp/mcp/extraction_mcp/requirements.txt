@@ -1,0 +1,9 @@
+python-dotenv
+fastmcp
+mcp
+httpx-sse
+starlette
+uvicorn
+google-cloud-storage
+google-cloud-aiplatform
+vertexai

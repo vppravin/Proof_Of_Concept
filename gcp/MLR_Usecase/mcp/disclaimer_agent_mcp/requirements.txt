@@ -1,0 +1,11 @@
+python-dotenv==1.2.1
+fastmcp
+uvicorn
+mcp
+google-cloud-storage
+google-cloud-discoveryengine
+google-genai
+python-pptx
+python-docx
+PyPDF2
+pymupdf

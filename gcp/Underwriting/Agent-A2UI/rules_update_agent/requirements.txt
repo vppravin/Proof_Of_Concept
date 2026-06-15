@@ -1,0 +1,7 @@
+google-adk
+google-genai
+google-cloud-storage
+google-cloud-aiplatform
+vertexai
+python-dotenv==1.2.1
+openpyxl

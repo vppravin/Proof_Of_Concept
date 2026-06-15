@@ -1,0 +1,10 @@
+google-adk==1.18.0
+
+yfinance==0.2.40
+matplotlib==3.8.4
+requests>=2.32.4
+uvicorn
+starlette
+google-cloud-storage
+httpx
+sse-starlette

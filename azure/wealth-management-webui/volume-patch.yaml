@@ -1,0 +1,26 @@
+properties:
+  template:
+    volumes:
+    - name: webui-data
+      storageType: AzureFile
+      storageName: webui-data
+    containers:
+    - name: wealth-management
+      image: wmagentacr-hmf9f2atgjd6a5ce.azurecr.io/wealth-management-webui:v4
+      resources:
+        cpu: 1.0
+        memory: 2Gi
+      env:
+      - name: OPENAI_API_BASE_URL
+        value: https://router-agent.livelybay-96634f40.eastus2.azurecontainerapps.io/v1
+      - name: OPENAI_API_KEY
+        value: wm-router-2026-secret
+      - name: WEBUI_NAME
+        value: Wealth Management
+      - name: ENABLE_SIGNUP
+        value: "true"
+      - name: DEFAULT_MODELS
+        value: router
+      volumeMounts:
+      - volumeName: webui-data
+        mountPath: /app/backend/data/uploads

@@ -1,0 +1,10 @@
+google-adk==1.18.0
+google-genai==1.47.0
+python-dotenv==1.2.1
+simple-salesforce==1.12.6
+mcp
+httpx-sse
+fastmcp
+starlette
+uvicorn
+
